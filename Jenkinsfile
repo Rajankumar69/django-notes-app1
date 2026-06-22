@@ -33,6 +33,7 @@ pipeline {
         stage("Test") {
             steps {
                 echo "This is testing the code"
+                echo "done testing"
             }
         }
 

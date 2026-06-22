@@ -51,12 +51,14 @@ pipeline {
 
         stage("Deploy") {
             steps {
+                echo "Deploying the code"
                 sh '''
                 whoami
                 docker compose down || true
                 docker compose up -d
                 docker ps
                 '''
+                echo "Done Deployment"
             }
         }
     }
